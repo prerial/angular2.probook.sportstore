@@ -1,12 +1,12 @@
 /**
  * Created by Mikhail on 4/19/2017.
  */
-import { Component } from "@angular/core";
-import { Cart } from "../model/cart.model";
+import { Component } from '@angular/core';
+import { Cart } from '../model/cart.model';
 
 @Component({
   moduleId: module.id,
-  templateUrl: "cartDetail.component.html"
+  templateUrl: 'cartDetail.component.html'
 })
 export class CartDetailComponent {
 

@@ -1,7 +1,7 @@
 /**
  * Created by Mikhail on 4/18/2017.
  */
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({ selector: '[myHighlight]' })
 

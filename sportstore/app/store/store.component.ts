@@ -2,11 +2,11 @@
  * Created by Mikhail on 4/17/2017.
  */
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 import { Product } from '../model/product.model';
 import { ProductRepository } from '../model/product.repository';
-import { Cart } from "../model/cart.model";
+import { Cart } from '../model/cart.model';
 
 @Component({
   selector: 'store',
@@ -48,12 +48,12 @@ export class StoreComponent {
 
   get pageCount(): number {
     return Math.ceil(this.repository
-        .getProducts(this.selectedCategory).length / this.productsPerPage)
+        .getProducts(this.selectedCategory).length / this.productsPerPage);
   }
 
   addProductToCart(product: Product) {
     this.cart.addLine(product);
-    this.router.navigateByUrl("/cart");
+    this.router.navigateByUrl('/cart');
   }
 /*
   get pageNumbers(): number[] {

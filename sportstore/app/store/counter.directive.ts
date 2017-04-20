@@ -2,7 +2,7 @@
  * Created by Mikhail on 4/18/2017.
  */
 import {
-  Directive, ViewContainerRef, TemplateRef, Input, Attribute, SimpleChanges
+  Directive, ViewContainerRef, TemplateRef, Input, SimpleChanges
 } from '@angular/core';
 
 @Directive({
@@ -10,12 +10,13 @@ import {
 })
 
 export class CounterDirective {
+  @Input('counterOf')
+  counter: number;
+
   constructor(private container: ViewContainerRef,
               private template: TemplateRef<Object>) {
   }
 
-  @Input('counterOf')
-  counter: number;
   ngOnChanges(changes: SimpleChanges) {
     this.container.clear();
     for (let i = 0; i < this.counter; i++) {
